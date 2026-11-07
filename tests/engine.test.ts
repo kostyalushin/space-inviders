@@ -11,13 +11,13 @@ import {
 const idle = { left: false, right: false, fire: false }
 
 describe('arcade simulation', () => {
-  it('starts a fresh run with 55 invaders, three lives and four shields', () => {
+  it('starts a fresh run with 55 invaders, three lives and five shields', () => {
     const g = createGame()
     startGame(g)
     expect(g.status).toBe('playing')
     expect(g.enemies).toHaveLength(55)
     expect(g.lives).toBe(3)
-    expect(g.bunkers).toHaveLength(4)
+    expect(g.bunkers).toHaveLength(5)
     expect(g.score).toBe(0)
   })
   it('clamps the player inside the playfield', () => {
