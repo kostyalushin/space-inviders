@@ -1,0 +1,130 @@
+export type KittenKind = 'ginger' | 'tuxedo' | 'siamese'
+
+export interface KittenSprite {
+  palette: Record<string, string>
+  frames: string[][]
+}
+
+// Both the Vue portraits and Canvas renderer use these two-frame pixel sprites.
+export const KITTENS: Record<KittenKind, KittenSprite> = {
+  ginger: {
+    palette: {
+      b: '#f6b66e',
+      d: '#be753e',
+      c: '#fff0cf',
+      p: '#ed98a0',
+      e: '#293e35',
+      w: '#f7e5bd',
+    },
+    frames: [
+      [
+        '..b..........b..',
+        '..bb........bb..',
+        '..bpbbdbbdbbpb..',
+        '..bbbbbddbbbbb..',
+        '..bbbebbbbebbb..',
+        'wwbbbbcppcbbbbww',
+        '...bbbcddcbbb...',
+        '....bbbbbbbb..b.',
+        '....dbbbbbbd..db',
+        '...bbbbbbbbbbbb.',
+        '...bbb....bbbb..',
+        '...bbb....bbb...',
+      ],
+      [
+        '..b..........b..',
+        '..bb........bb..',
+        '..bpbbdbbdbbpb..',
+        '..bbbbbddbbbbb..',
+        '..bbbebbbbebbb..',
+        'wwbbbbcppcbbbbww',
+        '...bbbcddcbbb...',
+        '....bbbbbbbb...b',
+        '....dbbbbbbd..bb',
+        '...bbbbbbbbbbbb.',
+        '...bbb....bbbb..',
+        '....bbb..bbb....',
+      ],
+    ],
+  },
+  tuxedo: {
+    palette: {
+      b: '#667780',
+      d: '#283c42',
+      c: '#f4f1de',
+      p: '#ef9da8',
+      e: '#dae891',
+      w: '#f4f1de',
+    },
+    frames: [
+      [
+        '..b..........b..',
+        '..bb........bb..',
+        '..bpbbbccbbbpb..',
+        '..bbbbbccbbbbb..',
+        '..bbbebbbbebbb..',
+        'wwbbbbcppcbbbbww',
+        '...bbbcddcbbb...',
+        '....bbccccbb..b.',
+        '....bbccccbb..bb',
+        '...bbbccccbbbbb.',
+        '...bbb....bbbb..',
+        '...ccc....ccc...',
+      ],
+      [
+        '..b..........b..',
+        '..bb........bb..',
+        '..bpbbbccbbbpb..',
+        '..bbbbbccbbbbb..',
+        '..bbbebbbbebbb..',
+        'wwbbbbcppcbbbbww',
+        '...bbbcddcbbb...',
+        '....bbccccbb...b',
+        '....bbccccbb..bb',
+        '...bbbccccbbbbb.',
+        '...bbb....bbbb..',
+        '....ccc..ccc....',
+      ],
+    ],
+  },
+  siamese: {
+    palette: {
+      b: '#e7d5ae',
+      d: '#8f766a',
+      c: '#fff3d3',
+      p: '#dc929a',
+      e: '#93dbf6',
+      w: '#f6e9cb',
+    },
+    frames: [
+      [
+        '..d..........d..',
+        '..db........bd..',
+        '..dpdbbbbbbdpd..',
+        '..dddddddddddd..',
+        '..bddeddddeddb..',
+        'wwbdddcppcdddbww',
+        '...bbbcddcbbb...',
+        '....bbbbbbbb..b.',
+        '....bbbbbbbb..bb',
+        '...bbbbbbbbbbbb.',
+        '...ddd....dddd..',
+        '...ddd....ddd...',
+      ],
+      [
+        '..d..........d..',
+        '..db........bd..',
+        '..dpdbbbbbbdpd..',
+        '..dddddddddddd..',
+        '..bddeddddeddb..',
+        'wwbdddcppcdddbww',
+        '...bbbcddcbbb...',
+        '....bbbbbbbb...b',
+        '....bbbbbbbb..bb',
+        '...bbbbbbbbbbbb.',
+        '...ddd....dddd..',
+        '....ddd..ddd....',
+      ],
+    ],
+  },
+}
