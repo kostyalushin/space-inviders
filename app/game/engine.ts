@@ -91,7 +91,7 @@ function populate(g: Game) {
     type: Math.floor(i / 11),
     frame: 0,
   }))
-  g.bunkers = [130, 300, 470, 640].map((x) => ({
+  g.bunkers = [80, 232, 384, 536, 688].map((x) => ({
     x,
     y: HEIGHT - 139,
     cells: Array.from({ length: 120 }, (_, i) => {
